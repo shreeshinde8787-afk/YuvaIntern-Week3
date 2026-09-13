@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelVista - Explore The World</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar container">
+
+            <a href="#home" class="logo">Travel<span>Vista</span></a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <p class="small-title">DISCOVER YOUR NEXT ADVENTURE</p>
+
+            <h1>Explore The World,<br>One Journey At A Time</h1>
+
+            <p>
+                Discover beautiful destinations, create unforgettable
+                memories and experience the world with TravelVista.
+            </p>
+
+            <a href="#destinations" class="btn">Explore Destinations</a>
+
+        </div>
+    </section>
+
+
+    <!-- Destinations -->
+    <section class="section" id="destinations">
+
+        <div class="container">
+
+            <div class="section-title">
+                <p>TRAVEL WITH US</p>
+                <h2>Popular Destinations</h2>
+                <span>
+                    Find your perfect destination for your next adventure.
+                </span>
+            </div>
+
+            <!-- Search -->
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔎 Search destination..."
+                    aria-label="Search destination"
+                >
+            </div>
+
+            <div class="destination-grid" id="destinationGrid">
+
+                <!-- Paris -->
+                <article class="destination-card reveal" data-name="paris">
+                    <div class="destination-image paris">
+                        <button class="favorite-btn" data-destination="Paris">
+                            ♡
+                        </button>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Paris, France</h3>
+                        <p>The city of lights, art and romance.</p>
+
+                        <button
+                            class="details-btn"
+                            data-place="Paris"
+                        >
+                            View Details
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Bali -->
+                <article class="destination-card reveal" data-name="bali">
+                    <div class="destination-image bali">
+                        <button class="favorite-btn" data-destination="Bali">
+                            ♡
+                        </button>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Bali, Indonesia</h3>
+                        <p>Beautiful beaches, temples and nature.</p>
+
+                        <button
+                            class="details-btn"
+                            data-place="Bali"
+                        >
+                            View Details
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Dubai -->
+                <article class="destination-card reveal" data-name="dubai">
+                    <div class="destination-image dubai">
+                        <button class="favorite-btn" data-destination="Dubai">
+                            ♡
+                        </button>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Dubai, UAE</h3>
+                        <p>Luxury, adventure and modern attractions.</p>
+
+                        <button
+                            class="details-btn"
+                            data-place="Dubai"
+                        >
+                            View Details
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="noResults" class="no-results">
+                No destination found.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why Us -->
+    <section class="section why-section" id="why-us">
+
+        <div class="container">
+
+            <div class="section-title">
+                <p>TRAVEL BETTER</p>
+                <h2>Why Choose TravelVista?</h2>
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Worldwide Destinations</h3>
+                    <p>Explore amazing places around the world.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">💰</div>
+                    <h3>Best Prices</h3>
+                    <p>Enjoy memorable trips at affordable prices.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Safe Travel</h3>
+                    <p>Your comfort and safety are our priorities.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Trusted Service</h3>
+                    <p>Simple planning and reliable travel support.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+
+        <div class="container">
+
+            <h2>Ready For Your Next Adventure?</h2>
+
+            <p>
+                Tell us about your travel plans and start exploring.
+            </p>
+
+            <!-- Contact Form -->
+            <form id="contactForm" class="contact-form" novalidate>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="Tell us about your travel plan..."
+                    rows="4"
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+
+                <div id="formMessage"></div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Modal -->
+    <div class="modal" id="detailsModal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" id="closeModal">
+                ×
+            </button>
+
+            <h2 id="modalTitle">Destination</h2>
+
+            <p id="modalText"></p>
+
+            <button class="btn" id="modalCloseButton">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Back To Top -->
+    <button id="topBtn" class="top-btn">
+        ↑
+    </button>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+            <p>© 2026 TravelVista. All Rights Reserved.</p>
+            <p>Designed for Yuva Intern - Week 3</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
